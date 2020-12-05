@@ -317,3 +317,7 @@ function findPair(data,target){
     }
 }
 findPair([10,20,10,30,40,50,60,70],50);
+//hihihiasdalsf
+function something(){
+    
+}
