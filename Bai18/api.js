@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $.ajax({
+        url:"https://jsonplaceholder.typicode.com/posts";
+        type:"GET";
+        success(rs){
+            console.log(rs);
+        }
+    })
+});
