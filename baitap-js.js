@@ -319,5 +319,28 @@ function findPair(data,target){
 findPair([10,20,10,30,40,50,60,70],50);
 //b28
 function findLongest(data){
-    
+    console.log("** Bai 28 **");
+    var arr = data.slice().sort();
+    var i = 0,j=0,k=1;;
+    var temp = [];
+    while(k<arr.length){
+        if(arr[j].charAt(i)==arr[k].charAt(i)){
+            i++;
+        }
+        if(arr[j].charAt(i)!=arr[k].charAt(i)){
+            temp.push(arr[j].substring(0,i));
+            j++;
+            k++;
+        }
+    }
+    var count ={};
+    for(var i=0;i<temp.length;i++){
+        count[temp[i]] = count[temp[i]] ? count[temp[i]]+1 : 1; 
+    }
+    var idx = Math.max.apply(null,Object.values(count));
+    var ans = Object.keys(count).find((ele)=>
+        count[ele] == idx
+    )
+    console.log(ans);
 }
+findLongest(["something","art","stesla","artist","arting","someone","socool","article","somebody","some"]);
