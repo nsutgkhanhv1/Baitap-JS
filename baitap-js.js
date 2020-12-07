@@ -344,3 +344,123 @@ function findLongest(data){
     console.log(ans);
 }
 findLongest(["something","art","stesla","artist","arting","someone","socool","article","somebody","some"]);
+//b29
+function num_string_range(numeric,character,bound){
+    console.log("** Bai 29 **");
+    var s = numeric.charCodeAt();
+    var e = character.charCodeAt();
+    var ans = [];
+    for(var i=s;i<=e;i=i+bound){
+        ans.push(String.fromCharCode(i));
+    }
+    console.log(ans);
+}
+num_string_range("a","z",2);
+//b30
+function Merge_arr_remove_dup(arr1,arr2){
+    console.log("** Bai 30 **");
+    var arr = arr1.concat(arr2);
+    var ans = [];
+    var set = new Set(arr);
+    set.forEach((ele)=>{
+        ans.push(ele);
+    })
+    console.log(ans);
+}
+Merge_arr_remove_dup([1, 2, 3],[2, 30, 1]);
+//b31
+function remove_specific_ele(arr,spec){
+    console.log("** Bai 31 **");
+    var ans = arr.filter((ele)=>ele!=spec);
+    console.log(ans);
+}
+remove_specific_ele([2, 5, 9, 6], 5);
+//b32
+function find_arr_contain_specific(arr,spec){
+    console.log("** Bai 32 **");
+    var ans = arr.some((ele)=>ele==spec);
+    console.log(ans);
+}
+find_arr_contain_specific([2, 5, 9, 6], 5);
+//b33
+function empty_arr(data){
+    console.log("** Bai 33 **");
+    data.length =0;
+    console.log(data);
+}
+empty_arr([1, 3, 6, 3, -5]);
+//b35
+function get_ramdom_item(arr){
+    console.log("** Bai 35 **");
+    var indx = Math.floor(Math.random()*(arr.length-1));
+    return arr[indx];
+}
+get_ramdom_item([1,2,3,4,5,6,7]);
+//b36
+function create_arr_of_spec(idx,spec){
+    console.log("** Bai 36 **");
+    var arr = [];
+    for(var i=0;i<idx;i++){
+        arr.push(spec);
+    }
+    console.log(arr);
+}
+create_arr_of_spec(6,0);
+//b37
+function create_arr_of_specstr(idx,spec){
+    console.log("** Bai 37 **");
+    var arr = [];
+    for(var i=0;i<idx;i++){
+        arr.push(spec);
+    }
+    console.log(arr);
+}
+create_arr_of_specstr(6,"haha");
+//b38
+function move_arr_ele(data,s,e){
+    console.log("** Bai 38 **");
+    while(s<0){
+        s+=data.length;
+    }
+    while(e<0){
+        e+=data.length;
+    }
+    var temp =  data.splice(s,1)[0];
+    data.splice(e,0,temp);
+    console.log(data);
+}
+move_arr_ele([10, 20, 30, 40, 50], -1, -2);
+//b39
+function filter_arr_val(data){
+    console.log("** Bai 39 **");
+    var ans = [];
+    data.forEach((ele)=>{
+        if(ele){
+            ans.push(ele);
+        }
+    })
+    console.log(ans);
+}
+filter_arr_val([58, '', 'abcd', true, null, false, 0]);
+//b40
+function generate_arr_of_spec(s,idx){
+    console.log("** Bai 40 **");
+    var arr = [];
+    arr[0] = s;
+    for(var i=1;i<idx;i++){
+        arr[i] = s+1;
+        s++;
+    }
+    console.log(arr);
+}
+generate_arr_of_spec(-6,3);
+//b41
+function generate_arr_beetween_spec(spec1,spec2){
+    console.log("** Bai 41 **");
+    var arr = [];
+    for(var i=spec1;i<=spec2;i++){
+        arr.push(i);
+    }
+    console.log(arr);
+}
+generate_arr_beetween_spec(-4, 7);
