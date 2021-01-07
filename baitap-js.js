@@ -3,8 +3,6 @@ function is_array(data) {
     console.log("**Bai 1**");
     return Array.isArray(data);
 }
-var b1 = is_array([1, 2, 3]);
-console.log(b1);
 //b2
 function array_clone(data) {
     console.log("**Bai 2**");
